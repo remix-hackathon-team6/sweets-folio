@@ -13,18 +13,98 @@
  *= require_tree .
  *= require_self
  */
+
 // 見出し用デザイン
 h2 {
-  border-bottom: 5px #F8823C solid;
-  padding-bottom: 5px;
-  font-weight: normal;
-  font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Meiryo,"メイリオ",Helvetica,Sans-Serif;
+	border-bottom: 5px #F8823C solid;
+	padding-bottom: 5px;
+	font-weight: normal;
+	font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Meiryo,"メイリオ",Helvetica,Sans-Serif;
 
-  span {
-    margin-left:20px;
-    font-size:60%;
-    color: #ccc;
-    position: relative;
-    top: -5px;
-  }
+	span {
+		margin-left:20px;
+		font-size:60%;
+		color: #ccc;
+		position: relative;
+		top: -5px;
+	}
 }
+
+.header {
+	overflow: hidden;
+}
+
+.header img {
+	float: left;
+	width: 200px;
+	height: 200px;
+	margin-left: 50px;
+	margin-top: 20px;
+}
+
+.header h1 {
+	float: left;
+	margin-top: 115px;
+	margin-left: 30px;
+	font-size: 27px;
+}
+
+@media screen and (max-width: 990px) {
+	.header h1 {
+		font-size: 20px;
+		margin-left: 10px;
+	}
+	.header img {
+		margin-left: 20px;
+	}
+
+}
+
+@media screen and (max-width: 630px) {
+
+	.header img {
+		margin-left: 50px;
+	}
+
+	.header h1 {
+		display: none;
+	}
+}
+
+
+.header ul {
+	float: right;
+	margin-right: 20px;
+	margin-top: 20px;
+}
+
+.header ul li {
+	float: left;
+	list-style: none;
+}
+
+.header ul li + li {
+	margin-left: 10px;
+}
+
+.main {
+	overflow: hidden;
+	width: 100%;
+}
+
+.footer {
+	width: 100%;
+	text-align: center;
+	background-color: #3cf;
+	color: #fff;
+	padding: 30px 0;
+	margin-top: 150px;
+	border-radius: 50px 50px 0 0;
+	font-size: 24px;
+
+	box-shadow:rgba(5, 38, 82, 0.65098) 0px -1px 6px 2px;
+	-webkit-box-shadow:rgba(5, 38, 82, 0.65098) 0px -1px 6px 2px;
+	-moz-box-shadow:rgba(5, 38, 82, 0.65098) 0px -1px 6px 2px;
+}
+
+
