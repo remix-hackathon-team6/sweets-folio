@@ -9,7 +9,7 @@ class CreateUsers < ActiveRecord::Migration
       t.text :user_info
       t.integer :shouhin_id
       t.boolean :pastry
-
+      t.string :remember_token
       t.timestamps null: false
     end
   end
