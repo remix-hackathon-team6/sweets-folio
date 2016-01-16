@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+// 見出し用デザイン
+h2 {
+  border-bottom: 5px #F8823C solid;
+  padding-bottom: 5px;
+  font-weight: normal;
+  font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Meiryo,"メイリオ",Helvetica,Sans-Serif;
+
+  span {
+    margin-left:20px;
+    font-size:60%;
+    color: #ccc;
+    position: relative;
+    top: -5px;
+  }
+}
