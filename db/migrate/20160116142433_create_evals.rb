@@ -1,8 +1,8 @@
 class CreateEvals < ActiveRecord::Migration
   def change
     create_table :evals do |t|
-      t.integer :user_id
-      t.integer :shouhin_id
+      t.references :user_id, index: true, null: false
+      t.references :shouhin_id, index: true, null:false
       t.text :comment
       t.integer :evaluation
 
