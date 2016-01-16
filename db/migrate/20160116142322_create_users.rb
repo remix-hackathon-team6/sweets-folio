@@ -8,7 +8,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :user_image
       t.text :user_info
       t.integer :shouhin_id
-      t.boolearn :pastry
+      t.boolean :pastry
 
       t.timestamps null: false
     end
