@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>SweetsFolio</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<div class="container">
-    <%= yield %>
-</div>
+  <head>
+    <title>SweetsFolio</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
 
-</body>
+    <div class="container">
+      <div class="header">
+        <%= link_to image_tag('logo.png'), root_path %>
+        <h1>あなたに合ったスイーツを見つけ出せます。</h1>
+        <ul>
+          <li><%= link_to 'Login', root_path %></li>
+          <li>|</li>
+          <li><%= link_to 'HELP', root_path %></li>
+        </ul>
+      </div>
+
+      <div class="main">
+        <%= yield %>
+      </div>
+
+      <div class="footer container">
+        (c) 2016 Sweets Folio
+      </div>
+
+    </div>
+  </body>
 </html>
