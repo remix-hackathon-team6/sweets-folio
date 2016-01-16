@@ -1,3 +1,97 @@
 // Place all the styles related to the Top controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@mixin search-button($width, $height) {
+  letter-spacing: .3em;
+  text-indent: .3em;
+  outline: none;
+  color: #ffffff;
+  width: $width;
+  height: $height;
+  border: 1px solid #D4D3D3;
+  background-color: #2FCDB4;
+}
+.searchbox {
+  position: relative;
+  
+  font-size: 18px;
+  height: 44px;
+  width: 100%;
+  margin-top: 60px;
+  margin-bottom: 80px;
+
+  .search-string {
+    letter-spacing: .5px;
+    outline: none;
+    float: left;
+    padding: 0px 16px;
+    width: 818px;
+    height: 42px;
+    border: 1px solid #D4D3D3;
+  }
+
+  #main-search-button {
+    @include search-button(108px, 44px);
+    border-left: 0;
+  }
+}
+
+// // 見出し用デザイン
+// h2 {
+//   border-bottom: 5px #F8823C solid;
+//   padding-bottom: 5px;
+//   font-weight: normal;
+//   font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Meiryo,"メイリオ",Helvetica,Sans-Serif;
+
+//   span {
+//     margin-left:20px;
+//     font-size:60%;
+//     color: #ccc;
+//     position: relative;
+//     top: -5px;
+//   }
+// }
+
+// 以下カードのデザイン
+.card {
+  float: left;
+  margin: 30px 30px;
+  width: 300px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #ccc;
+
+  .card-img {
+    border-radius: 5px 5px 0 0;
+    max-width: 100%;
+    height: auto;
+  }
+  .card-content {
+    padding: 20px;
+  }
+ .card-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+  .card-text {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .card-link {
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding: 20px;
+  }
+  .card-link a {
+    text-decoration: none;
+    color: #0bd;
+    margin: 0 10px;
+  }
+  .card-link a:hover {
+    color: #0090aa;
+  }
+}
