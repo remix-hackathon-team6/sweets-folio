@@ -8,7 +8,6 @@
 /.bundle
 /vendor/bundle
 
-#
 *.rbc
 capybara-*.html
 .rspec
@@ -23,3 +22,5 @@ capybara-*.html
 rerun.txt
 pickle-email-*.html Ignore all logfiles and tempfiles.
 .DS_Store
+config/database.yml
+config/secrets.yml
