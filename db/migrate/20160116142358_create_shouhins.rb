@@ -2,7 +2,7 @@ class CreateShouhins < ActiveRecord::Migration
   def change
     create_table :shouhins do |t|
       t.integer :shouhin_id
-      t.integer :shouhin_name
+      t.string :shouhin_name
       t.text :shouhin_info
       t.integer :shouhin_eval
       t.integer :user_id
