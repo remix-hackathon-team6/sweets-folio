@@ -40,3 +40,18 @@
   .description {
   }
 }
+
+.review-card {
+  height: 200px;
+  background-color: #F5F1E9;
+  margin-bottom: 30px;
+  padding: 25px;
+  .reviewer {
+    height: 150px;
+    width: 150px;
+    float: left;
+  }
+  h3 {
+    margin-top: 20px;
+  }
+}
