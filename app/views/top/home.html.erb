@@ -1,2 +1,46 @@
-<h1>Top#home</h1>
-<p>Find me in app/views/top/home.html.erb</p>
+
+  <div class="searchbox">
+<!-- to be edited -->
+    <%= form_tag root_path, id: :search, method: :get do %>
+      <%= text_field_tag 'query', '', placeholder: 'フリーワードでお菓子を検索する', class: 'search-string' %>
+      <%= submit_tag '検索', id: 'main-search-button', name: '' %>
+    <% end %>
+  </div>
+<h2>お菓子を探す<span>Seek Sweets</span></h2>
+
+
+<h2>新着お菓子<span>New Arrival</span></h2>
+
+<section class="card">
+  <img class="card-img" src="http://casamingo.gift/photo/syusu042.jpg" alt="No Image">
+  <div class="card-content">
+    <h1 class="card-title">さくらんぼのショートケーキ</h1>
+    <p class="card-text">素材にこだわりぬいた本当にこだわりのケーキです。</p>
+  </div>
+  <div class="card-link">
+    <a href="http://webcreatorbox.com/about">詳細</a>
+    <a href="http://webcreatorbox.com/">制作者情報</a>
+  </div>
+</section>
+<section class="card">
+  <img class="card-img" src="http://casamingo.gift/photo/syusu042.jpg" alt="No Image">
+  <div class="card-content">
+    <h1 class="card-title">さくらんぼのショートケーキ</h1>
+    <p class="card-text">素材にこだわりぬいた本当にこだわりのケーキです。</p>
+  </div>
+  <div class="card-link">
+    <a href="http://webcreatorbox.com/about">詳細</a>
+    <a href="http://webcreatorbox.com/">制作者情報</a>
+  </div>
+</section>
+<section class="card">
+  <img class="card-img" src="http://casamingo.gift/photo/syusu042.jpg" alt="No Image">
+  <div class="card-content">
+    <h1 class="card-title">さくらんぼのショートケーキ</h1>
+    <p class="card-text">素材にこだわりぬいた本当にこだわりのケーキです。</p>
+  </div>
+  <div class="card-link">
+    <a href="http://webcreatorbox.com/about">詳細</a>
+    <a href="http://webcreatorbox.com/">制作者情報</a>
+  </div>
+</section>
