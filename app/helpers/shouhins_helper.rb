@@ -1,0 +1,2 @@
+module ShouhinsHelper
+end
