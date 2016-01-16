@@ -25,7 +25,7 @@
     outline: none;
     float: left;
     padding: 0px 16px;
-    width: 818px;
+    width: 80%;
     height: 42px;
     border: 1px solid #D4D3D3;
   }
@@ -36,21 +36,21 @@
   }
 }
 
-// 見出し用デザイン
-h2 {
-    border-bottom: 5px #3cf solid;
-    padding-bottom: 5px;
-  font-weight: normal;
-  font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Meiryo,"メイリオ",Helvetica,Sans-Serif;
+// // 見出し用デザイン
+// h2 {
+//   border-bottom: 5px #F8823C solid;
+//   padding-bottom: 5px;
+//   font-weight: normal;
+//   font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Meiryo,"メイリオ",Helvetica,Sans-Serif;
 
-  span {
-    margin-left:20px;
-    font-size:60%;
-    color: #ccc;
-    position: relative;
-    top: -5px;
-  }
-}
+//   span {
+//     margin-left:20px;
+//     font-size:60%;
+//     color: #ccc;
+//     position: relative;
+//     top: -5px;
+//   }
+// }
 
 // 以下カードのデザイン
 .card {

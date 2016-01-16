@@ -4,7 +4,7 @@ class CreateUsers < ActiveRecord::Migration
       t.integer :user_id
       t.string :user_name
       t.string :email
-      t.string :password
+      t.string :password_digest
       t.string :user_image
       t.text :user_info
       t.integer :shouhin_id

@@ -1,12 +1,20 @@
 Rails.application.routes.draw do
-  get 'top/home'
+  resources :sessions
+  resources :users
+
+  root 'top#home'
+  get 'top/search'
+  get 'sessions/new'
+  
+  match '/search', to: 'top#search', via: 'get'
+  match '/signup', to: 'users#new', via: 'get'
+  match '/signin', to: 'sessions#new', via: 'get'
+  match '/signout', to: 'sessions#destroy', via: 'delete'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'top#home'
-
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
