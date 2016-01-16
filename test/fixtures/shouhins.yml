@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  shouhin_id: 1
+  shouhin_name: 1
+  shouhin_info: MyText
+  shouhin_eval: 1
+  user_id: 1
+  shouhin_image_1: MyString
+  shouhin_image_2: MyString
+  shouhin_image_3: MyString
+  shouhin_image_4: MyString
+
+two:
+  shouhin_id: 1
+  shouhin_name: 1
+  shouhin_info: MyText
+  shouhin_eval: 1
+  user_id: 1
+  shouhin_image_1: MyString
+  shouhin_image_2: MyString
+  shouhin_image_3: MyString
+  shouhin_image_4: MyString
