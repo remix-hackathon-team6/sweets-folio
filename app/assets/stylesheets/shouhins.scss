@@ -1,3 +1,42 @@
 // Place all the styles related to the Shouhins controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// お菓子名
+
+
+// 画像部
+.sweets-imgs {
+  float: left;
+  width: 520px;
+  height: 450px;
+
+  .big-img {
+  	float: left;
+    margin: 0;
+    width: 500px;
+    // height: 422px;
+  }
+  .small-img {
+  	float: left;
+    width: 156px;
+    margin: 4px 16px 0 0;
+  }
+}
+.sweets-detail {
+  letter-spacing: .3em;
+}
+
+.cook-profile {
+  margin-top: 40px;
+  img {
+    border:1px solid #333;
+    padding:5px;
+    background-color:#ffffff;
+    height: 140px;
+    width: 140px;
+  }
+
+  .description {
+  }
+}
