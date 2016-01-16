@@ -63,8 +63,9 @@
 
   .card-img {
     border-radius: 5px 5px 0 0;
-    max-width: 100%;
-    height: auto;
+    width: 300px;
+    height: 214px;
+    overflow: hidden;
   }
   .card-content {
     padding: 20px;

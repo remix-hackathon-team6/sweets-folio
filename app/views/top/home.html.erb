@@ -8,39 +8,20 @@
   </div>
 <h2>お菓子を探す<span>Seek Sweets</span></h2>
 
-
 <h2>新着お菓子<span>New Arrival</span></h2>
+<% @shouhins.each do |shouhin| %>
 
-<section class="card">
-  <img class="card-img" src="http://casamingo.gift/photo/syusu042.jpg" alt="No Image">
-  <div class="card-content">
-    <h1 class="card-title">さくらんぼのショートケーキ</h1>
-    <p class="card-text">素材にこだわりぬいた本当にこだわりのケーキです。</p>
-  </div>
-  <div class="card-link">
-    <a href="http://webcreatorbox.com/about">詳細</a>
-    <a href="http://webcreatorbox.com/">制作者情報</a>
-  </div>
-</section>
-<section class="card">
-  <img class="card-img" src="http://casamingo.gift/photo/syusu042.jpg" alt="No Image">
-  <div class="card-content">
-    <h1 class="card-title">さくらんぼのショートケーキ</h1>
-    <p class="card-text">素材にこだわりぬいた本当にこだわりのケーキです。</p>
-  </div>
-  <div class="card-link">
-    <a href="http://webcreatorbox.com/about">詳細</a>
-    <a href="http://webcreatorbox.com/">制作者情報</a>
-  </div>
-</section>
-<section class="card">
-  <img class="card-img" src="http://casamingo.gift/photo/syusu042.jpg" alt="No Image">
-  <div class="card-content">
-    <h1 class="card-title">さくらんぼのショートケーキ</h1>
-    <p class="card-text">素材にこだわりぬいた本当にこだわりのケーキです。</p>
-  </div>
-  <div class="card-link">
-    <a href="http://webcreatorbox.com/about">詳細</a>
-    <a href="http://webcreatorbox.com/">制作者情報</a>
-  </div>
-</section>
+  <section class="card">
+      <%= image_tag shouhin.shouhin_image_1, class: 'card-img' %>
+    <div class="card-content">
+      <h1 class="card-title"><%= shouhin.shouhin_name %></h1>
+      <p class="card-text"><%= shouhin.shouhin_info %></p>
+    </div>
+    <div class="card-link">
+      <%= link_to '詳細を見る', "/shouhins/#{shouhin.id}" %>
+      <%= link_to '制作者情報', "/users/#{shouhin.id}" %>
+      <!-- <a href="http://webcreatorbox.com/">制作者情報</a> -->
+    </div>
+  </section>
+
+<% end %>
