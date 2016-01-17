@@ -13,15 +13,9 @@
 
   <h2>☆ 作品一覧</h2>
   <div class="shouhins">
-    <div class="item">item 1</div>
-    <div class="item">item 2</div>
-    <div class="item">item 3</div>
-    <div class="item">item 4</div>
-    <div class="item">item 5</div>
-    <div class="item">item 6</div>
-    <div class="item">item 7</div>
-    <div class="item">item 8</div>
-    <div class="item">item 9</div>
+    <% Shouhin.where(user_id: @user).all.each do |s| %>
+      <div class="item"><%= link_to image_tag(s.shouhin_image_1), shouhin_path(s)%></div>
+    <% end %>
   </div>
 </div>
 
