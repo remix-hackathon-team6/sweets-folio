@@ -3,12 +3,14 @@
 
   <h2>☆ ユーザー情報</h2>
   <div class='user_image'>
-    <%= image_tag 'megumi.jpg' %>
+    <%= image_tag @user.user_image %>
   </div>
 
-  <h3>めぐみさん</h3>
+  <h3><%= @user.user_name %></h3>
+
+
   <div class="explain">
-    <p>　私は、７歳のころから、パティシエを目指してきました。腕には自身があります♡ ぜひ、食べてみてください。</p>
+    <p><%= @user.user_info %></p>
   </div>
 
   <h2>☆ 作品一覧</h2>
