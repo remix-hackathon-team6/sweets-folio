@@ -1,3 +1,47 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.user_image {
+	text-align: center;
+	margin-top: 50px;
+}
+
+.user_image img {
+	border-radius: 50%;
+	max-width: 500px;
+	max-height: 500px;
+	border: 10px solid #ccc;
+}
+
+h3 {
+	text-align: center;
+	font-size: 26px;
+}
+
+.explain {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.shouhins {
+	overflow: hidden;
+}
+
+.item {
+	float: left;
+	margin: 10px;
+	height: 350px;
+	font-size: 20px;
+	text-align: center;
+	line-height: 350px;
+	overflow: hidden;
+}
+
+.item img {
+	width:  auto;
+	height: 100%;
+}
+
+

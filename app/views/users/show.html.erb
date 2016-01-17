@@ -1,0 +1,24 @@
+
+<div class="container">
+
+  <h2>☆ ユーザー情報</h2>
+  <div class='user_image'>
+    <%= image_tag @user.user_image %>
+  </div>
+
+  <h3><%= @user.user_name %></h3>
+
+
+  <div class="explain">
+    <p><%= @user.user_info %></p>
+  </div>
+
+  <h2>☆ 作品一覧</h2>
+  <div class="shouhins">
+    <% Shouhin.where(user_id: @user).all.each do |s| %>
+      <div class="item"><%= link_to image_tag(s.shouhin_image_1), shouhin_path(s)%></div>
+    <% end %>
+  </div>
+</div>
+
+
