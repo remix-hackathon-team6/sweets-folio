@@ -1,27 +1,36 @@
 
+  <h2>お菓子を探す<span>Seek Sweets</span></h2>
   <div class="searchbox">
 <!-- to be edited -->
     <%= form_tag root_path, id: :search, method: :get do %>
-      <%= text_field_tag 'query', '', placeholder: 'フリーワードでお菓子を検索する', class: 'search-string' %>
+      <%= text_field_tag 'query', params[:query], placeholder: 'フリーワードでお菓子を検索する', class: 'search-string' %>
       <%= submit_tag '検索', id: 'main-search-button', name: '' %>
     <% end %>
   </div>
-<h2>お菓子を探す<span>Seek Sweets</span></h2>
 
-<h2>新着お菓子<span>New Arrival</span></h2>
-<% @shouhins.each do |shouhin| %>
+  <% if params[:query] %>
+    <h2>検索結果<span>Search Results</span></h2>
+    <ol>
+      <% Shouhin.where("shouhin_name LIKE ?", "%#{params[:query]}%").limit(10).each do |s| %>
+        <li><%= image_tag s.shouhin_image_1 %><%= link_to s.shouhin_name, shouhin_path(s) %></li>
+      <% end %>
+    </ol>
+  <% else %>
 
-  <section class="card">
-      <%= image_tag shouhin.shouhin_image_1, class: 'card-img' %>
-    <div class="card-content">
-      <h1 class="card-title"><%= shouhin.shouhin_name %></h1>
-      <p class="card-text"><%= shouhin.shouhin_info %></p>
-    </div>
-    <div class="card-link">
-      <%= link_to '詳細を見る', "/shouhins/#{shouhin.id}" %>
-      <%= link_to '制作者情報', "/users/#{shouhin.id}" %>
-      <!-- <a href="http://webcreatorbox.com/">制作者情報</a> -->
-    </div>
-  </section>
+    <h2>新着お菓子<span>New Arrival</span></h2>
+    <% @shouhins.each do |shouhin| %>
 
-<% end %>
+      <section class="card">
+        <%= image_tag shouhin.shouhin_image_1, class: 'card-img' %>
+        <div class="card-content">
+          <h1 class="card-title"><%= shouhin.shouhin_name %></h1>
+          <p class="card-text"><%= shouhin.shouhin_info %></p>
+        </div>
+        <div class="card-link">
+          <%= link_to '詳細を見る', "/shouhins/#{shouhin.id}" %>
+          <%= link_to '制作者情報', "/users/#{shouhin.id}" %>
+          <!-- <a href="http://webcreatorbox.com/">制作者情報</a> -->
+        </div>
+      </section>
+    <% end %>
+  <% end %>
