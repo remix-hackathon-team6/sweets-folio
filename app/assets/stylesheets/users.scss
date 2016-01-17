@@ -32,14 +32,16 @@ h3 {
 .item {
 	float: left;
 	margin: 10px;
-	width: 350px;
 	height: 350px;
-	background-color: #cccccc;
-	font-size: 50px;
+	font-size: 20px;
 	text-align: center;
 	line-height: 350px;
+	overflow: hidden;
 }
 
-
+.item img {
+	width:  auto;
+	height: 100%;
+}
 
 
