@@ -46,13 +46,15 @@
 <h2>みんなの評価<span>Graduation</span></h2>
 
 <div class="container">
+  <% @comments.each do |comment| %>
   <div class="review-card">
-  	<img src="http://stat.ameba.jp/user_images/37/5d/10035026882_s.jpg" class="reviewer">
-  	<div class="review-title"><h3>素材の味が生かされている！</h3></div><img src="http://www.best-sumai.com/brand/img/f-star-4.gif" width="100px">
-  	  <p class="pro">プロ</p
-  	</div>
-  	<div class="review-text">小麦粉の風味とコクのある生クリームの絶妙なマッチが最高だ。また機会があったら食べたいと思う。</div>
-  	<!-- to be provided -->
-  	<a href="" class="see-profile">この人について知る</div>
+    <img src="http://stat.ameba.jp/user_images/37/5d/10035026882_s.jpg" class="reviewer">
+    <div class="review-title"><h3><%= comment.title %></h3></div><img src="http://www.best-sumai.com/brand/img/f-star-4.gif" width="100px">
+      <p class="pro">プロ</p
+    </div>
+    <div class="review-text"><%= comment.comment %></div>
+    <!-- to be provided -->
+    <a href="" class="see-profile">この人について知る</div>
   </div>
+  <% end %>
 </div>
