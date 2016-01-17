@@ -15,11 +15,12 @@
   	float: left;
     margin: 0;
     width: 500px;
-    // height: 422px;
+    max-height: 350px;
   }
   .small-img {
   	float: left;
     width: 156px;
+    max-width: 100px;
     margin: 4px 16px 0 0;
   }
 }
