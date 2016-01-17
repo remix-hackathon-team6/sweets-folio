@@ -14,17 +14,20 @@
 ActiveRecord::Schema.define(version: 20160116183252) do
 
   create_table "evals", force: :cascade do |t|
-    t.integer  "user_id",    limit: 4
-    t.integer  "shouhin_id", limit: 4
-    t.text     "comment",    limit: 65535
-    t.integer  "evaluation", limit: 4
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.integer  "user_id_id",    limit: 4,     null: false
+    t.integer  "shouhin_id_id", limit: 4,     null: false
+    t.text     "comment",       limit: 65535
+    t.integer  "evaluation",    limit: 4
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
+
+  add_index "evals", ["shouhin_id_id"], name: "index_evals_on_shouhin_id_id", using: :btree
+  add_index "evals", ["user_id_id"], name: "index_evals_on_user_id_id", using: :btree
 
   create_table "shouhins", force: :cascade do |t|
     t.integer  "shouhin_id",      limit: 4
-    t.integer  "shouhin_name",    limit: 4
+    t.string   "shouhin_name",    limit: 255
     t.text     "shouhin_info",    limit: 65535
     t.integer  "shouhin_eval",    limit: 4
     t.integer  "user_id",         limit: 4
